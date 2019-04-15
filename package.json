@@ -1,0 +1,42 @@
+{
+  "name": "sistema-de-ideias",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "griffith": "^1.4.0",
+    "prop-types": "latest",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.6",
+    "react-grid-system": "^4.4.3",
+    "react-html5video": "^2.5.1",
+    "react-player": "^1.11.0",
+    "react-plyr": "^2.2.0",
+    "react-scripts": "2.1.8",
+    "react-youtube": "^7.9.0",
+    "redux": "^4.0.1",
+    "semantic-ui-react": "^0.86.0",
+    "video-react": "^0.13.6",
+    "yarn": "^1.15.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "html-loader": "^0.5.5"
+  }
+}
