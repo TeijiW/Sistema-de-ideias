@@ -1,74 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import  Youtube from '../youtube/youtube';
+import FormContainer from '../FormContainer'
 
-const styles=() => ({
-    root:{
+
+const styles= {
+    root: {
         flexGrow: 1,
-        marginTop: 'auto',
-        marginLeft: 'auto',
-        alignItems: "stretch",
-        justifyContent: "center",
+        marginTop: 15,
+        marginLeft: 5,
+        marginRight: 5,
     },
 
     paper: {
         padding:20,
-        alignItems: 'center',
+        alignItems: 'fixed',
         marginTop: 15,
     },
-    paper2: {
-        alignItems: 'center',
-        marginTop: 15,
-        marginLeft:10,
-        marginRight: 10
-    },
-});
+};
 
 
-function Body(props){
-    const {classes} = props;
+class Body extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
+    render() {
+        return (
+            <div style={{padding: 8}} className={this.props.classes.root}>
+                <Grid container spacing={16}>
+                    <Grid item xs={12} md={6}>
+                        <Paper className={this.props.classes.paper}>
+                                <Typography variant="h4" component="h3">
+                                    Primeira Etapa
+                                </Typography>
+                                <Typography component="p" style={{marginTop: 40, textAlign: 'left'}}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet
+                                    ullamcorper lorem a ullamcorper.
+                                    Integer bibendum dui tortor, vel congue nunc pharetra non. nunc pharetra non.vel
+                                    congue nunc pharetra non. nunc pharetra non.
+                                </Typography>
+                        <br/><br/><br/><br/>
+                        </Paper>
+                    </Grid>
 
-    return(
-        <div style={{ padding: 9}} className={classes.root}>
-            <Grid container spacing={16}>
-                <Grid item xs ={6}>
-                    <Paper className={classes.paper}>
-                        <Typography>
-                            <Typography variant="h4"component="h3" >
-                                Primeira etapa
-                            </Typography>
-                            <Typography  component="p" style={{marginTop:40, textAlign: 'left'}}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet ullamcorper lorem a ullamcorper.
-                                Integer bibendum dui tortor, vel congue nunc pharetra non. nunc pharetra non.vel congue nunc pharetra non. nunc pharetra non.
-                            </Typography>
-                            <Button variant="contained" color="primary" style={{marginTop:50, textAlign: 'left', width:'100'}}>
-                                começar
-                            </Button>
-                        </Typography>
-                    </Paper>
+                    <Grid item xs={12} md={6} style={{marginTop: 15}}>
+                        <Youtube ytId='gG4VH86aFGo'/>
+                    </Grid>
                 </Grid>
-                <Grid xs ={6} >
-                    <Youtube youId ='yRYFKcMa_Ek'/>
-                </Grid>
-            </Grid>
-
-            <Grid container spacing={16}>
-                <Grid item xs>
-                </Grid>
-                <Grid item xs={8} >
-                   <h1> teste teste testeteste teste teste teste teste teste</h1>
-                </Grid>
-                <Grid item xs>
-                </Grid>
-            </Grid>
-        </div>
-    );
-
+                <FormContainer/>
+            </div>
+        );
+    }
 }
 
 Body.propTypes = {

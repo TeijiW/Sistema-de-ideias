@@ -4,11 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Fab from '@material-ui/core/Fab';
 import MenuIcon from '@material-ui/icons/Menu';
-import AddIcon from '@material-ui/icons/Add';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
+
+
 
 const styles = theme => ({
     text: {
@@ -16,23 +16,15 @@ const styles = theme => ({
         paddingLeft: theme.spacing.unit * 2,
         paddingRight: theme.spacing.unit * 2,
     },
-    paper: {
-        paddingBottom: 50,
-    },
-    list: {
-        marginBottom: theme.spacing.unit * 2,
-    },
-    subHeader: {
-        backgroundColor: theme.palette.background.paper,
-    },
     appBar: {
-        top: '',
+        top: 'auto',
         bottom: 0,
     },
     toolbar: {
         alignItems: 'center',
         justifyContent: 'space-between',
     },
+
 });
 
 function BottomAppBar(props) {
