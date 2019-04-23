@@ -41,10 +41,7 @@ class FormContainer extends React.Component {
     }
     delFields(id){
         this.setState( {
-           fields: this.state.fields.filter((item) => {
-                if(item.id !== id){
-                  return (console.log(this.state.fields.indexOf(id)))
-                }
+           fields: this.state.fields.filter(item => return item.id !== id)
            })
         });
     }
